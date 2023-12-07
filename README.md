@@ -1,6 +1,6 @@
 # Clustering-of-Obesity-Levels
 
-This project will use K Nearest Neighbor (KNN) algorithm to predict different obesity level categories. 
+This project will use K Nearest Neighbor (KNN) algorithm to predict different obesity level categories. In addition to a KNN model, Pycaret will be used to evaluate the best model to use for the data. 
 
 Clustering will be done using the following variables that are associated with different obesity levels. 
 
@@ -31,6 +31,8 @@ The variables mentioned will be used to cluster each row into the following cate
 - Obesity I
 - Obesity II
 - Obesity III
+
+- 
 
 References:
 Ali, M. (2021, November). PyCaret Tutorial: A beginner's guide for automating ML workflows using PyCaret. Datacamp. https://www.datacamp.com/tutorial/guide-for-automating-ml-workflows-using-pycaret?utm_source=google&utm_medium=paid_search&utm_campaignid=19589720830&utm_adgroupid=157156377071&utm_device=c&utm_keywor
