@@ -1,8 +1,9 @@
-# Clustering-of-Obesity-Levels
+# Prediction-of-Obesity-Levels
 
 This project will use K Nearest Neighbor (KNN) algorithm to predict different obesity level categories. In addition to a KNN model, Pycaret will be used to evaluate the best model to use for the data. 
 
-Clustering will be done using the following variables that are associated with different obesity levels. 
+
+The data incudes the following variables that are associated with different obesity levels. 
 
 - gender
 - age
@@ -21,7 +22,7 @@ Clustering will be done using the following variables that are associated with d
 - use of alcohol
 - transportion mode
 
-The variables mentioned will be used to cluster each row into the following categories for the target variable
+The variables mentioned will be used to clasify each data point into the following categories for the target variable
 
 - Insufficient Weight
 - Underweight
@@ -32,7 +33,39 @@ The variables mentioned will be used to cluster each row into the following cate
 - Obesity II
 - Obesity III
 
-- 
+Initially looking at the data to evaluate the variables with the highest correlation to the target variable using a correlation matrix and heatmap. Both showed the variables age, weight, and family history to have the highest positive correaltions and the variables snacks and physical activity to the highest negative correlations. 
+
+![image](https://github.com/fathiajeylani/Clustering-of-Obesity-Levels/assets/99691983/a6fe2100-6af5-4abf-b929-daa565f14720). 
+
+The KNN model yielded an accuracy of about 87% using K = 3 after evaluating the optimal k value. 
+
+![image](https://github.com/fathiajeylani/Clustering-of-Obesity-Levels/assets/99691983/6ee4ed54-6332-4d93-a533-e09c4224f305)
+
+From plotting a confusion matrix, it showed the KNN model to have a total of 383 correct predictions. 
+
+Feature importance using the Lasso algorithm showed weight, family history, number of meals, physical activity and snacks to have the most importance. This was interesting to see because the heatmap showed age to also be included in variables with high correlation to the target variable but not included in the feature importance. 
+
+![image](https://github.com/fathiajeylani/Clustering-of-Obesity-Levels/assets/99691983/b1da15cc-9f79-4282-9b93-eedcbfe89ebb). 
+
+Removing the variables that weren't important to the target variable didn't help with the accuracy of the KNN model but rather decreased it. This yeilded a 76% accuracy. 
+
+Using Pycaret to determine the best model for our data, showed the Light Gradient Boosting Machine (LGBM) to have yield the best accuracy of 97%. 
+
+Using the LGBM model for our data yielded an almost 98% accuracy. 
+
+The confusion matrix for this model showed to have 793 correct predictions. This was much higher thant the KNN model. 
+
+![image](https://github.com/fathiajeylani/Clustering-of-Obesity-Levels/assets/99691983/794414d9-e65e-455b-aa0a-4e3e643acd9d)
+
+
+Also looking at the feature importance for this model and excluding any of those ones that had a lower importance yielded a lower accuracy of 96%. 
+
+![image](https://github.com/fathiajeylani/Clustering-of-Obesity-Levels/assets/99691983/0568301a-e291-48fc-9a68-77a6b8e1a7e2)
+
+Overall, the LGBM model was better with performance compared to the KNN model. 
+
+Future considerations would be to find a similar data set and compare how the model performs when introducing new but similar data. 
+
 
 References:
 Ali, M. (2021, November). PyCaret Tutorial: A beginner's guide for automating ML workflows using PyCaret. Datacamp. https://www.datacamp.com/tutorial/guide-for-automating-ml-workflows-using-pycaret?utm_source=google&utm_medium=paid_search&utm_campaignid=19589720830&utm_adgroupid=157156377071&utm_device=c&utm_keywor
