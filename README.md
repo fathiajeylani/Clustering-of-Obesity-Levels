@@ -35,17 +35,20 @@ The variables mentioned will be used to clasify each data point into the followi
 
 Initially looking at the data to evaluate the variables with the highest correlation to the target variable using a correlation matrix and heatmap. Both showed the variables age, weight, and family history to have the highest positive correaltions and the variables snacks and physical activity to the highest negative correlations. 
 
-![image](https://github.com/fathiajeylani/Clustering-of-Obesity-Levels/assets/99691983/a6fe2100-6af5-4abf-b929-daa565f14720). 
+![image](https://github.com/fathiajeylani/Prediction-of-Obesity-Levels/assets/99691983/6d729f7b-c9b4-4115-8f44-714b99426f5d)
+
 
 The KNN model yielded an accuracy of about 87% using K = 3 after evaluating the optimal k value. 
 
-![image](https://github.com/fathiajeylani/Clustering-of-Obesity-Levels/assets/99691983/6ee4ed54-6332-4d93-a533-e09c4224f305)
+![image](https://github.com/fathiajeylani/Prediction-of-Obesity-Levels/assets/99691983/7a076931-77bc-4697-a125-a89b556993b1)
 
 From plotting a confusion matrix, it showed the KNN model to have a total of 383 correct predictions. 
 
+![image](https://github.com/fathiajeylani/Prediction-of-Obesity-Levels/assets/99691983/618af201-79df-4791-b48c-f96146e964ef)
+
 Feature importance using the Lasso algorithm showed weight, family history, number of meals, physical activity and snacks to have the most importance. This was interesting to see because the heatmap showed age to also be included in variables with high correlation to the target variable but not included in the feature importance. 
 
-![image](https://github.com/fathiajeylani/Clustering-of-Obesity-Levels/assets/99691983/b1da15cc-9f79-4282-9b93-eedcbfe89ebb). 
+ ![image](https://github.com/fathiajeylani/Prediction-of-Obesity-Levels/assets/99691983/bd25a914-5d52-48cd-9a61-c2fe161c0551)
 
 Removing the variables that weren't important to the target variable didn't help with the accuracy of the KNN model but rather decreased it. This yeilded a 76% accuracy. 
 
@@ -55,8 +58,7 @@ Using the LGBM model for our data yielded an almost 98% accuracy.
 
 The confusion matrix for this model showed to have 793 correct predictions. This was much higher thant the KNN model. 
 
-![image](https://github.com/fathiajeylani/Clustering-of-Obesity-Levels/assets/99691983/794414d9-e65e-455b-aa0a-4e3e643acd9d)
-
+![image](https://github.com/fathiajeylani/Prediction-of-Obesity-Levels/assets/99691983/9af2de1a-2e1a-435c-bac6-87af739bb4ec)
 
 Also looking at the feature importance for this model and excluding any of those ones that had a lower importance yielded a lower accuracy of 96%. 
 
