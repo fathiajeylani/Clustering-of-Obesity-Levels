@@ -58,11 +58,11 @@ Using the LGBM model for our data yielded an almost 98% accuracy.
 
 The confusion matrix for this model showed to have 793 correct predictions. This was much higher thant the KNN model. 
 
-![image](https://github.com/fathiajeylani/Prediction-of-Obesity-Levels/assets/99691983/9af2de1a-2e1a-435c-bac6-87af739bb4ec)
+![image](https://github.com/fathiajeylani/Prediction-of-Obesity-Levels/assets/99691983/b1d08d49-5064-4fe9-8f55-6948b962076a)
 
 Also looking at the feature importance for this model and excluding any of those ones that had a lower importance yielded a lower accuracy of 96%. 
 
-![image](https://github.com/fathiajeylani/Clustering-of-Obesity-Levels/assets/99691983/0568301a-e291-48fc-9a68-77a6b8e1a7e2)
+![image](https://github.com/fathiajeylani/Prediction-of-Obesity-Levels/assets/99691983/66a6dce6-f38f-44e6-9403-f470fdf00c07)
 
 Overall, the LGBM model was better with performance compared to the KNN model. 
 
